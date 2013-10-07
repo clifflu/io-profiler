@@ -24,7 +24,7 @@ DISK_FN="$DISK_MP/$FN"
 # Main
 #
 
-echo "# `basename $0` $@"
+echo "# `basename \"$0\"` $@"
 
 mkdir -p "$DISK_MP"
 mkdir -p "$TMPFS_MP"
