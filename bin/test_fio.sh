@@ -18,7 +18,7 @@ SIZE="256m"
 echo "# `basename \"$0\"` $@"
 for scr in `ls "$DIR_CONF"`
 do
-    for bs in 4k 8k 16k 32k 64k
+    for bs in 1k 2k 4k 8k 16k 32k 64k
     do
         echo "## BS:$bs, SCR:$scr, NUM: $NUMOBJS, SIZE: $SIZE"
         NUMJOBS=$NUMOBJS SIZE=$SIZE BS=$bs DISK_MP="$DISK_MP" "$LOC_FIO" "$DIR_CONF/$scr"
