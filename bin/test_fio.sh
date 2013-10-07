@@ -12,8 +12,8 @@ if [ -d "$1" ]; then
     DISK_MP="$1"
 fi
 
-NUMOBJS=1
-SIZE="1m"
+NUMOBJS=4
+SIZE="256m"
 
 echo "# `basename \"$0\"` $@"
 for scr in `ls "$DIR_CONF"`
