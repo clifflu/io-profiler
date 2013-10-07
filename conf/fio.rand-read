@@ -1,7 +1,0 @@
-[random-read]
-rw=randread
-size=1024m
-directory=/
-iodepth=8
-direct=1
-invalidate=1

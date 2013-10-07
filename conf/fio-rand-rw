@@ -1,0 +1,9 @@
+[rand-rw]
+rw=randrw
+bs=${BS}
+numjobs=${NUMJOBS}
+size=${SIZE}
+directory=${DISK_MP}
+direct=1
+timeout=30
+group_reporting
