@@ -25,5 +25,3 @@ do
         echo ""
     done
 done
-
-echo ""

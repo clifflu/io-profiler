@@ -4,16 +4,23 @@
 from json import dumps
 
 import pylib
-import pylib.util
-import pylib.aws
-from pylib.path import MY_LOG
+import pylib.util as util
+import pylib.aws as aws
+
+from pylib.tests import profile
+
+DRIVE_COUNT = util.count_drives()
 
 # write instance info
-with open("%s/instance.json" % MY_LOG, "w") as fp:
-  fp.write(dumps(pylib.aws.get_instance_signature()))
+aws.log_instance_signature()
 
-# output fp
-with pylib.util.get_log_fp() as fp:
-  for test in pylib.tests:
-    test.execute(fp)
-    fp.flush()
+# prepare
+util.umount_drives()
+
+# single-disk tests
+if DRIVE_COUNT['ebs'] > 0:
+  profile({
+    'name': 'singular ebs',
+    'dev': util.list_drives('ebs')[0],
+    'mount': '/mnt/ebs',
+  })

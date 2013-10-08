@@ -1,3 +1,7 @@
 # -*- coding: utf-8 -*-
 
-tests = []
+from vanilla import vanillaTest
+
+tests = [
+  vanillaTest,
+]

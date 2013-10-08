@@ -53,5 +53,3 @@ rm -f "$DISK_FN"
 rmdir "$DISK_MP" > /dev/null 2>&1
 umount "$TMPFS_MP"
 rmdir "$TMPFS_MP"
-
-echo ""
