@@ -22,6 +22,8 @@ do
     do
         echo "## BS:$bs, SCR:$scr, NUM: $NUMOBJS, SIZE: $SIZE"
         NUMJOBS=$NUMOBJS SIZE=$SIZE BS=$bs DISK_MP="$DISK_MP" "$LOC_FIO" "$DIR_CONF/$scr"
+        echo ""
     done
 done
 
+echo ""
