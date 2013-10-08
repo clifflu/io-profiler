@@ -1,0 +1,205 @@
+# test_ramfs.sh /mnt/ebs-raid1-4
+## ram -> disk
+### Round 1 / 3
+	Command being timed: "cp /mnt/tmpfs/data.tmp /mnt/ebs-raid1-4/data.tmp"
+	User time (seconds): 0.02
+	System time (seconds): 1.46
+	Percent of CPU this job got: 2%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:54.48
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3712
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 282
+	Voluntary context switches: 1237
+	Involuntary context switches: 100
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 1048576
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+### Round 2 / 3
+	Command being timed: "cp /mnt/tmpfs/data.tmp /mnt/ebs-raid1-4/data.tmp"
+	User time (seconds): 0.00
+	System time (seconds): 1.75
+	Percent of CPU this job got: 2%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:59.10
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3712
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 283
+	Voluntary context switches: 2403
+	Involuntary context switches: 440
+	Swaps: 0
+	File system inputs: 32
+	File system outputs: 1048576
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+### Round 3 / 3
+	Command being timed: "cp /mnt/tmpfs/data.tmp /mnt/ebs-raid1-4/data.tmp"
+	User time (seconds): 0.06
+	System time (seconds): 1.58
+	Percent of CPU this job got: 3%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:54.61
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3712
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 282
+	Voluntary context switches: 2564
+	Involuntary context switches: 215
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1048576
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+## disk -> ram
+### Round 1 / 3
+	Command being timed: "cp /mnt/ebs-raid1-4/data.tmp /mnt/tmpfs/data.tmp"
+	User time (seconds): 0.02
+	System time (seconds): 0.90
+	Percent of CPU this job got: 95%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.96
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3712
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 283
+	Voluntary context switches: 1
+	Involuntary context switches: 102
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+### Round 2 / 3
+	Command being timed: "cp /mnt/ebs-raid1-4/data.tmp /mnt/tmpfs/data.tmp"
+	User time (seconds): 0.00
+	System time (seconds): 0.96
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.98
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3712
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 282
+	Voluntary context switches: 1
+	Involuntary context switches: 100
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+### Round 3 / 3
+	Command being timed: "cp /mnt/ebs-raid1-4/data.tmp /mnt/tmpfs/data.tmp"
+	User time (seconds): 0.00
+	System time (seconds): 0.98
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3712
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 282
+	Voluntary context switches: 1
+	Involuntary context switches: 96
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+which: no fio in (/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/opt/aws/bin:/root/bin:/opt/aws/bin:/root/bin)
+# test_fio.sh /mnt/ebs-raid1-4
+## BS:1k, SCR:fio-rand-read, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:2k, SCR:fio-rand-read, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:4k, SCR:fio-rand-read, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:8k, SCR:fio-rand-read, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:16k, SCR:fio-rand-read, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:32k, SCR:fio-rand-read, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:64k, SCR:fio-rand-read, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:1k, SCR:fio-rand-rw, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:2k, SCR:fio-rand-rw, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:4k, SCR:fio-rand-rw, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:8k, SCR:fio-rand-rw, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:16k, SCR:fio-rand-rw, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:32k, SCR:fio-rand-rw, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:64k, SCR:fio-rand-rw, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:1k, SCR:fio-seq-read, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:2k, SCR:fio-seq-read, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:4k, SCR:fio-seq-read, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:8k, SCR:fio-seq-read, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:16k, SCR:fio-seq-read, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:32k, SCR:fio-seq-read, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:64k, SCR:fio-seq-read, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:1k, SCR:fio-seq-rw, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:2k, SCR:fio-seq-rw, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:4k, SCR:fio-seq-rw, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:8k, SCR:fio-seq-rw, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:16k, SCR:fio-seq-rw, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:32k, SCR:fio-seq-rw, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
+## BS:64k, SCR:fio-seq-rw, NUM: 4, SIZE: 256m
+/root/prof/bin/test_fio.sh: line 24: : command not found
