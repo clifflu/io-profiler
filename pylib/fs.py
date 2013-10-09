@@ -1,5 +1,19 @@
 # -*- coding: utf-8 -*-
 
+from os import makedirs
+from subprocess import check_output
+from glob import glob
+
+def call(*args, **kwargs):
+  """
+  mockup to subprocess.call, 
+  so we don't break anythin
+  """
+  #from subprocess import call
+  print("call:")
+  print(args)
+
+
 def list_drives(filter=None):
   if filter is None:
     filter = []
@@ -30,15 +44,27 @@ def umount_drives():
   for dr in list_drives():
     call(['unmount', '/dev/%s' % dr])
 
+def warm_ebs_drives():
+  for d in list_drives('ebs'):
+    call(['dd', 'if=%s' % d, 'of=/dev/null'])
+#
+#
+#
 def mount(info):
   """
   mount, dev
   """
-  mkdirs(info['mount'], 0755)
+  makedirs(info['mount'], 0755)
   call(['mount', info['dev'], info['mount']])
 
 def umount(info):
   call(['umount', info['mount']])
+
+#
+#
+#
+def mk_ramfs(info):
+  pass
 
 def mk_raid(info):
   """

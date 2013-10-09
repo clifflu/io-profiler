@@ -5,6 +5,7 @@ from json import dumps
 
 import pylib
 import pylib.util as util
+import pylib.fs as fs
 import pylib.aws as aws
 
 from pylib.tests import profile
@@ -15,7 +16,8 @@ DRIVE_COUNT = util.count_drives()
 aws.log_instance_signature()
 
 # prepare
-util.umount_drives()
+fs.umount_drives()
+fs.warm_drives()
 
 # single-disk tests
 if DRIVE_COUNT['ebs'] > 0:

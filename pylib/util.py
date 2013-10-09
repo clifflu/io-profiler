@@ -1,12 +1,5 @@
 # -*- coding: utf-8 -*-
 from subprocess import Popen, PIPE
-from datetime import datetime
-from os import makedirs
-from glob import glob
-
-def call(*args):
-  print("call:")
-  print(args)
 
 def get_mem_mb():
   p1 = Popen(["free", "-m"], stdout=PIPE)
